@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Golos';
+    src: url('../fonts/golos/GolosText-SemiBold.woff2') format('woff2'), url('../fonts/golos/GolosText-SemiBold.woff') format('woff'), url('../fonts/golos/GolosText-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Golos';
+    src: url('../fonts/golos/GolosText-Medium.woff2') format('woff2'), url('../fonts/golos/GolosText-Medium.woff') format('woff'), url('../fonts/golos/GolosText-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Golos';
+    src: url('../fonts/golos/GolosText-Regular.woff2') format('woff2'), url('../fonts/golos/GolosText-Regular.woff') format('woff'), url('../fonts/golos/GolosText-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/*  */
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto/Roboto-Black.woff2') format('woff2'), url('../fonts/roboto/Roboto-Black.woff') format('woff'), url('../fonts/roboto/Roboto-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto/Roboto-Bold.woff2') format('woff2'), url('../fonts/roboto/Roboto-Bold.woff') format('woff'), url('../fonts/roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../fonts/roboto/RobotoCondensed-Bold.woff2') format('woff2'), url('../fonts/roboto/RobotoCondensed-Bold.woff') format('woff'), url('../fonts/roboto/RobotoCondensed-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
