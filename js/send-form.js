@@ -23,7 +23,7 @@ $(document).ready(function() {
             success: function(data) {
                 console.log(data);
                 // Вывод текста результата отправки
-                window.location.href = './pages/form-answer.html';
+                window.location.href = './form-answer.html';
 
             },
             error: function(jqXHR, text, error) {
@@ -32,7 +32,9 @@ $(document).ready(function() {
                 console.log('jqXHR: ' + jqXHR);
                 console.log('Текст: ' + text);
                 console.log('Ошибка: ' + error);
-                window.location.href = './pages/form-error.html';
+
+
+                window.location.href = './form-error.html';
             }
         });
 
