@@ -23,6 +23,7 @@ $(document).ready(function() {
             success: function(data) {
                 console.log(data);
                 // Вывод текста результата отправки
+                window.location.href = './pages/form-answer.html';
 
             },
             error: function(jqXHR, text, error) {
@@ -31,10 +32,13 @@ $(document).ready(function() {
                 console.log('jqXHR: ' + jqXHR);
                 console.log('Текст: ' + text);
                 console.log('Ошибка: ' + error);
+                window.location.href = './pages/form-error.html';
             }
         });
 
         this.reset();
+        //window.location.href = './pages/save.html';
         return false;
+
     });
 });

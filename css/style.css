@@ -1484,6 +1484,11 @@ a.popup__close:hover {
   background: #202226;
 }
 
+/* pages form-answer */
+.form-answer__title {
+  margin-top: 50px;
+}
+
 /*  */
 /* 
 

@@ -33,6 +33,11 @@ if (mail($to, $subject, $msg, $headerss)) {
 	echo "при отправке сообщения возникли ошибки";
 }
 
+/* if(isset($_POST['submit'])){
+	http_redirect('site.url')
+} */
+
+
 
 /* echo 'Ваше имя: ' . $_POST['name'] . ', Ваш телефон: ' . $_POST['phone'], ' Ваше сообщение: ' . $_POST['email']; */
 
