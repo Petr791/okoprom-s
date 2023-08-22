@@ -1484,9 +1484,59 @@ a.popup__close:hover {
   background: #202226;
 }
 
-/* pages form-answer */
+/* @pages form-answer */
 .form-answer__title {
-  margin-top: 50px;
+  /* margin-top: 50px; */
+}
+
+/* @pages delivery */
+.section-delivery {
+  margin-top: 60px;
+}
+
+.delivery-content {
+  display: grid;
+  grid-template: 1fr/minmax(592px, 592px);
+}
+
+.article {
+  margin-top: 60px;
+}
+.article__title {
+  color: #161616;
+  font-family: Golos;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.24px;
+}
+.article__desc {
+  color: #161616;
+  font-family: Golos;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 24px;
+}
+.article ul li {
+  color: #161616;
+  font-family: Golos;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 14px;
+}
+
+.article-list__title {
+  color: #161616;
+  font-family: Golos;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 24px;
 }
 
 /*  */
@@ -1603,6 +1653,9 @@ a.popup__close:hover {
   }
   .footer-menu__list li {
     margin-bottom: 20px;
+  }
+  .delivery-content {
+    grid-template: 1fr/minmax(461px, 461px);
   }
 }
 @media screen and (max-width: 900px) {
@@ -1771,6 +1824,9 @@ a.popup__close:hover {
             justify-content: start;
     row-gap: 12px;
   }
+  .delivery-content {
+    grid-template: 1fr/minmax(268px, 461px);
+  }
 }
 @media screen and (max-width: 760px) {
   .advantages-cards {
@@ -1835,6 +1891,29 @@ a.popup__close:hover {
   .advantages-card__desc {
     font-size: 14px;
     line-height: 16px;
+  }
+  .section-delivery {
+    margin-top: 40px;
+  }
+  .article {
+    margin-top: 32px;
+  }
+  .article ul li {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 12px;
+  }
+  .article__title {
+    font-size: 18;
+    line-height: 24px;
+  }
+  .article__desc {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 12px;
+  }
+  .article-list__title {
+    margin-top: 12px;
   }
 }
 @media screen and (max-width: 576px) {

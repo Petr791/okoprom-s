@@ -6,6 +6,11 @@ const menu = document.getElementById('mobile-menu');
 const mainMenuButtons = document.getElementById('mainmenu-buttons');
 
 menuHamb.addEventListener('click', function() {
+    //menuHambLine.classList.toggle('pressed');
+    //menu.classList.toggle('active');
+    //mainMenuButtons.classList.toggle('hidden');
+
+
     menuHambLine.classList.toggle('pressed');
     menu.classList.toggle('active');
     mainMenuButtons.classList.toggle('hidden');
