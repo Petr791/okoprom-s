@@ -1506,7 +1506,7 @@ a.popup__close:hover {
   color: #161616;
   font-family: Golos;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 28px;
   letter-spacing: 0.24px;
 }
@@ -1537,6 +1537,16 @@ a.popup__close:hover {
   font-weight: 400;
   line-height: 20px;
   margin-top: 24px;
+}
+
+/* @pages guarantee */
+.section-guarantee {
+  margin-top: 60px;
+}
+
+.guarantee-content {
+  display: grid;
+  grid-template: 1fr/minmax(592px, 592px);
 }
 
 /*  */
@@ -1655,6 +1665,9 @@ a.popup__close:hover {
     margin-bottom: 20px;
   }
   .delivery-content {
+    grid-template: 1fr/minmax(461px, 461px);
+  }
+  .guarantee-content {
     grid-template: 1fr/minmax(461px, 461px);
   }
 }
@@ -1827,6 +1840,9 @@ a.popup__close:hover {
   .delivery-content {
     grid-template: 1fr/minmax(268px, 461px);
   }
+  .guarantee-content {
+    grid-template: 1fr/minmax(268px, 461px);
+  }
 }
 @media screen and (max-width: 760px) {
   .advantages-cards {
@@ -1895,6 +1911,9 @@ a.popup__close:hover {
   .section-delivery {
     margin-top: 40px;
   }
+  .section-guarantee {
+    margin-top: 40px;
+  }
   .article {
     margin-top: 32px;
   }
@@ -1904,7 +1923,7 @@ a.popup__close:hover {
     margin-top: 12px;
   }
   .article__title {
-    font-size: 18;
+    font-size: 18px;
     line-height: 24px;
   }
   .article__desc {

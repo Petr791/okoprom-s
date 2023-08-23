@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ответ</title>
+    <title>Гарантия</title>
 
 
     <link rel="apple-touch-icon" sizes="60x60" href="./images/favicon/apple-touch-icon.png">
@@ -15,8 +15,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" href="./css/slick.css">
-    <!-- <link rel="stylesheet" href="./css/slick-theme.css"> -->
+
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -142,12 +141,80 @@
         <!-- main -->
         <main class="main">
 
-            <section class="section section-form-answer">
+            <section class="section section-guarantee">
                 <div class="container">
-                    <h1 class="section-title form-answer__title">Спасибо за заявку, скоро с вами свяжемся.</h1>
+
+                    <div class="guarantee-content">
+                        <h1 class="section-title guarantee-title">Гарантия</h1>
+
+                        <!--  -->
+                        <article class="article">
+                            <h2 class="article__title">Условия и срок , при которых осуществляется гарантийное обслуживания товара</h2>
+                            <p class="article__desc">При покупке товара с нашего сайта предоставляется гарантия сроком, как правило, до 1 года (со дня приобретения товара). Основанием для предоставления гарантийного обслуживания служит гарантийный талон или товарная накладная,
+                                который покупатель получает при приобретении товара и в которой прописан срок гарантии в определенной строке. На протяжении всего периода эксплуатации наше представительство предоставляет техническую поддержку поставляемого
+                                оборудования, так же у нас вы можете приобрести комплектующие и запасные части к оборудованию.</p>
+                        </article>
+
+                        <article class="article">
+                            <h2 class="article__title">Гарантийный ремонт не предоставляется в следующих случаях:</h2>
+                            <ul class="article-list">
+                                <li>– в товаре есть механические, термические или электрические поломки (сюда относятся и скрытые);</li>
+                                <li>– когда в товаре имеются какие –либо повреждения по причине неаккуратного обращения пользователя;</li>
+                                <li>– когда в товаре имеются какие –либо повреждения по причине неаккуратного обращения пользователя;</li>
+                                <li>– в изделии есть признаки попадания внутрь веществ, каких-то предметов или жидкостей;</li>
+                                <li>– техника вышла из строя из-за применения несовместимых комплектующих, неподходящих расходных материалов;</li>
+                                <li>– на товаре есть повреждения, которые были вызваны стихийным бедствием, пожаром или какими-то бытовыми факторами;</li>
+                                <li>– товар был поврежден при перевозке, хранении или нарушались правила его эксплуатации;</li>
+                                <li>– если есть элементы с признаками перегрева;</li>
+                                <li>– есть признаки того, что сделано вмешательство в строение устройства.</li>
+                            </ul>
+                        </article>
+                        <article class="article">
+                            <h2 class="article__title">Обмен товара</h2>
+                            <p class="article__desc">При обнаружении недостатков заводского характера, обмен товара возможен на протяжении четырнадцати дней (без учета дня приобретения товара). Продавец обязан осуществить замену товара в течение семи дней с момента обращения
+                                покупателя.
+                            </p>
+                        </article>
+                        <article class="article">
+                            <h2 class="article__title">Обмен продукции возможен в следующих случаях:</h2>
+
+                            <ul class="article-list">
+                                <li>– товар не использовался;</li>
+                                <li>– товар имеет надлежащий товарный вид;</li>
+                                <li>– не повреждены его первоначальные качества;</li>
+                                <li>– на своих местах находятся фабричные ярлыки, а также – все пломбы на – своих местах и не нарушены;</li>
+                                <li>– покупатель имеет при себе товарный чек или накладную.</li>
+
+                            </ul>
+                        </article>
+
+                    </div>
                 </div>
             </section>
 
+            <section class="section section-consultation">
+                <div class="container">
+                    <div class="consultation">
+                        <div class="consultation__content">
+                            <h2 class="consultation__title section-title">Будем рады ответить на все интересующие вопросы</h2>
+                            <h3 class="consultation__desc">Оставьте заявку и мы вам вскоре позвоним и проконсультируем по всем интересующим вопросам</h3>
+                        </div>
+                        <div class="consultation-form-wrapper">
+                            <form id="main-form" action="" method="post">
+                                <input class="main-form__input input input-name" type="text" name="name" placeholder="Ваше имя" required>
+                                <input class="main-form__input input input-phone" type="tel" name="phone" placeholder="+7(___)_ _" required>
+                                <input class="main-form__input input input-email" type="email" name="email" placeholder="E-mail (необязательно)">
+
+                                <input class="input-submit" type="submit" value="Отправить">
+                                <input type="hidden" name="formname" value="Форма на главной странице"></p>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
 
             <!-- popup display none-->
             <div class="popup" id="popup">
@@ -253,6 +320,7 @@
         </footer>
 
     </div>
+
 
     <script src="./js/jquery-3.6.4.js"></script>
     <!--  <script src="./js/slick.js"></script>
