@@ -1,5 +1,7 @@
 "use strict";
 
+
+
 var popupLinks = document.querySelectorAll('.popup-link');
 var body = document.querySelector('body');
 
@@ -17,6 +19,7 @@ if (popupLinks.length > 0) {
             var curentPopup = document.getElementById(popupName);
             popupOpen(curentPopup);
             e.preventDefault();
+            addPopupClass(); // animation
 
         });
     };
@@ -35,9 +38,10 @@ if (popupCloseIcon.length > 0) {
         el.addEventListener('click', function(e) {
             popupClose(el.closest('.popup'));
             e.preventDefault();
+
             //popup-form
             document.getElementById('popup-form').reset();
-            //e.target.reset(); 
+
         });
     };
 
@@ -78,7 +82,7 @@ function popupClose(popupActive) {
         }
     }
 
-
+    removePopupClass(); // animation
 
 }
 
@@ -164,3 +168,18 @@ document.addEventListener('keydown', function(e) {
         Element.prototype.matches = Element.prototype.matchesSelector || Element.prototype.webkitMatchesSelector || Element.prototype.mozMatchesSelector || Element.prototype.msMatchesSelector;
     }
 })();
+
+function addPopupClass() {
+    //  добавление классов анимации popup
+    //popupContent.classList.add('animate__animated', 'animate__zoomInUp', 'animate__delay-0s');
+    popupContent.classList.add('animate__animated', 'animate__fadeInUp');
+}
+
+
+
+
+function removePopupClass() {
+    // удаление классов анимации popup
+    //popupContent.classList.remove('animate__animated', 'animate__zoomInUp', 'animate__delay-0s');
+    popupContent.classList.remove('animate__animated', 'animate__fadeInUp');
+}

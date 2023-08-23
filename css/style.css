@@ -608,7 +608,6 @@ input.search-form__input:-webkit-autofill {
 }
 
 .mobile-menu {
-  opacity: 0;
   display: block;
   padding: 20px 16px 54px;
   background-color: #ffffff;
@@ -621,11 +620,9 @@ input.search-form__input:-webkit-autofill {
   -webkit-transform: translateX(-600px);
       -ms-transform: translateX(-600px);
           transform: translateX(-600px);
-  -webkit-transition: -webkit-transform 0.5s linear;
-  transition: -webkit-transform 0.5s linear;
-  transition: transform 0.5s linear;
-  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
   pointer-events: none;
+  --animate-duration: 1.2s;
+  opacity: 0;
 }
 .mobile-menu__items {
   display: grid;
@@ -1427,8 +1424,6 @@ input.form-input:-webkit-autofill {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
   overflow: hidden;
 }
 
@@ -1439,12 +1434,8 @@ input.form-input:-webkit-autofill {
   max-width: 800px;
   padding: 30px;
   position: relative;
-  -webkit-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
   opacity: 0;
-  -webkit-transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
-          transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
-  margin-top: 70px;
+  --animate-duration: 1.2s ;
 }
 
 .popup__close {
@@ -1457,13 +1448,13 @@ input.form-input:-webkit-autofill {
 }
 
 a.popup__close {
-  color: black;
+  color: white;
   -webkit-transition: color 0.5s linear;
   transition: color 0.5s linear;
 }
 
 a.popup__close:hover {
-  color: white;
+  color: black;
 }
 
 .popup.open {
@@ -1473,8 +1464,6 @@ a.popup__close:hover {
 
 .popup.open .popup__content {
   opacity: 1;
-  -webkit-transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
-          transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
 }
 
 .popup-consultation {
@@ -2000,11 +1989,6 @@ a.popup__close:hover {
   .mobile-menu {
     opacity: 1;
     pointer-events: all;
-  }
-  .mobile-menu.active {
-    -webkit-transform: translateX(0px);
-        -ms-transform: translateX(0px);
-            transform: translateX(0px);
   }
   .main-menu-inner.search .menu-hamb {
     display: none;

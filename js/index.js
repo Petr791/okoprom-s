@@ -6,15 +6,24 @@ const menu = document.getElementById('mobile-menu');
 const mainMenuButtons = document.getElementById('mainmenu-buttons');
 
 menuHamb.addEventListener('click', function() {
-    //menuHambLine.classList.toggle('pressed');
-    //menu.classList.toggle('active');
-    //mainMenuButtons.classList.toggle('hidden');
-
-
     menuHambLine.classList.toggle('pressed');
-    menu.classList.toggle('active');
+    //menu.classList.toggle('active');
     mainMenuButtons.classList.toggle('hidden');
+    menu.classList.toggle('animate__animated');
+    menu.classList.toggle('animate__fadeInLeft');
 });
+
+//animate__fadeInLeft
+//  добавление классов анимации для мобильного меню
+function addMobileMenuClass() {
+    popupContent.classList.add('animate__animated', 'animate__fadeInLeft');
+}
+// удаление классов анимации  для мобильного меню
+function removeMobileMenuClass() {
+    popupContent.classList.remove('animate__animated', 'animate__fadeInLeft');
+}
+
+
 
 
 //
