@@ -1704,6 +1704,100 @@ a.popup__close:hover {
   grid-template: 1fr/auto;
 }
 
+/* @page about-company */
+.section-about {
+  margin-top: 60px;
+}
+
+.about__desc {
+  color: #161616;
+  font-family: Golos;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: 40px;
+  max-width: 592px;
+}
+
+.benefit-cards {
+  border-top: 1px solid #E9E9E9;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 389px));
+  -webkit-column-gap: 16px;
+     -moz-column-gap: 16px;
+          column-gap: 16px;
+  padding-top: 40px;
+}
+
+.benefit-card__title {
+  color: #757575;
+  font-family: Golos;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.benefit-card__number {
+  color: #161616;
+  font-family: Golos;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 48px;
+  margin-top: 20px;
+}
+.benefit-card__desc {
+  color: #161616;
+  font-family: Golos;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: 12px;
+}
+
+.development-title {
+  max-width: 795px;
+}
+
+.development-wrapper {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, minmax(400px, 491px));
+  -webkit-column-gap: 117px;
+     -moz-column-gap: 117px;
+          column-gap: 117px;
+  margin-top: 60px;
+}
+
+.development-image {
+  width: 100%;
+  height: 564px;
+  border-radius: 16px;
+}
+
+.development-content {
+  padding-top: 30px;
+}
+.development-content__title {
+  color: #161616;
+  font-family: Golos;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0.24px;
+  margin-top: 60px;
+}
+.development-content__title:first-of-type {
+  margin-top: 0px;
+}
+.development-content__desc {
+  color: #161616;
+  font-family: Golos;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: 24px;
+}
+
 /*  */
 /* 
 
