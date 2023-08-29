@@ -1580,7 +1580,6 @@ a.popup__close:hover {
 .contacts-content-inner {
     max-width: 100%;
     height: 592px;
-    background-color: #aeaeae;
     border-radius: 16px;
 }
 
@@ -1610,9 +1609,6 @@ a.popup__close:hover {
 }
 
 .contacts-information-column {
-    /*   display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto; */
     // .contacts-information-column__title
     &__title {
         color: $text-black;
@@ -1685,8 +1681,10 @@ a.popup__close:hover {
     display: grid;
     grid-template-rows: 1fr;
     //grid-template-columns: repeat(3, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(280px, 389px));
+    //grid-template-columns: repeat(auto-fit, minmax(280px, 389px));
+    grid-template-columns: repeat(auto-fit, minmax(249px, 1fr));
     column-gap: 16px;
+    row-gap: 40px;
     padding-top: 40px;
 }
 
@@ -1730,7 +1728,7 @@ a.popup__close:hover {
     grid-template-rows: 1fr;
     //grid-template-columns: 1fr 1fr;
     //grid-template-columns: repeat(2, 491px);
-    grid-template-columns: repeat(2, minmax(400px, 491px));
+    grid-template-columns: repeat(2, minmax(335px, 491px));
     column-gap: 117px;
     margin-top: 60px;
 }
@@ -1868,7 +1866,8 @@ a.popup__close:hover {
     }
     .why-cards {
         grid-template-rows: 1fr 1fr;
-        grid-template-columns: minmax(220px, 300px) minmax(220px, 300px) minmax(220px, 300px);
+        //grid-template-columns: minmax(220px, 300px) minmax(220px, 300px) minmax(220px, 300px);
+        // grid-template-columns: repeat( minmax(220px, 1fr));
     }
     //footer
     .footer {
@@ -1930,6 +1929,30 @@ a.popup__close:hover {
     .contacts-information-wrapper {
         grid-template: auto auto/ 1fr;
         row-gap: 40px;
+    }
+    // page about-company
+    .about__desc {
+        max-width: 624px;
+    }
+    .benefit-cards {
+        column-gap: 40px;
+        row-gap: 40px;
+    }
+    .benefit-card__number {
+        margin-top: 12px;
+    }
+    .development-wrapper {
+        column-gap: 16px;
+        margin-top: 40px;
+    }
+    .development-image {
+        height: 533px;
+    }
+    .development-content {
+        padding-top: 22px;
+    }
+    .development-content__title {
+        margin-top: 40px;
     }
 }
 
@@ -2102,6 +2125,37 @@ a.popup__close:hover {
     .contacts-content-inner {
         height: 392px;
     }
+    // @page about-company
+    .about__desc {
+        max-width: 463px;
+        margin-top: 32px;
+    }
+    .benefit-cards {
+        column-gap: 40px;
+        row-gap: 40px;
+    }
+    .benefit-card__number {
+        margin-top: 6px;
+    }
+    .benefit-card__desc {
+        margin-top: 6px;
+    }
+    .development-wrapper {
+        grid-template-columns: minmax(288px, 464px);
+        margin-top: 32px;
+    }
+    .development-image {
+        display: none;
+    }
+    .development-content {
+        padding-top: 0px;
+    }
+    .development-content__title {
+        margin-top: 32px;
+    }
+    .development-content__desc {
+        margin-top: 12px;
+    }
 }
 
 @media screen and (max-width: 760px) {
@@ -2230,9 +2284,6 @@ a.popup__close:hover {
         margin-top: 32px;
         row-gap: 32px;
     }
-    /* .contacts-information-column {
-        margin-top: 32px;
-    } */
     .contacts-information-column__title {
         font-size: 18px;
         line-height: 20px;
@@ -2489,6 +2540,36 @@ a.popup__close:hover {
     }
     .popup-consultation {
         padding: 20px 20px;
+    }
+    // @page about-company
+    .section-about {
+        margin-top: 40px;
+    }
+    .about__desc {
+        font-size: 14px;
+        line-height: 16px;
+        margin-top: 20px;
+    }
+    .benefit-cards {
+        row-gap: 24px;
+        padding-top: 24px;
+    }
+    .benefit-card__title {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .benefit-card__number {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .benefit-card__desc {
+        font-size: 14px;
+        line-height: 16px;
+        margin-top: 4px;
+    }
+    .development-content__title {}
+    .development-content__desc {
+        margin-top: 12px;
     }
 }
 
