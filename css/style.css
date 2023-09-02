@@ -1793,6 +1793,71 @@ a.popup__close:hover {
   margin-top: 24px;
 }
 
+/* @page privacy-policy*/
+.section-privacy {
+  margin-top: 60px;
+}
+
+.privacy-desc {
+  color: #161616;
+  font-family: Golos;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 8px;
+}
+
+.privacy-policy__list > li.list-title {
+  color: #161616;
+  font-family: Golos;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 36px;
+  margin-top: 20px;
+}
+
+ol.list li.list-title > ol {
+  margin-top: 0px;
+}
+
+ol.list {
+  list-style: none;
+  counter-reset: li;
+  color: #161616;
+  font-family: Golos;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-left: 40px;
+}
+
+ol.list > li:before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+}
+
+ol.list li {
+  margin-top: 10px;
+}
+
+ul.unordered-list {
+  margin-left: 40px;
+}
+
+ul.unordered-list li {
+  /* list-style-type: circle; */
+  list-style-type: square;
+}
+
+a.policy-link {
+  color: #204da7;
+}
+
+a.policy-link:hover {
+  color: #0455f7;
+  text-decoration: underline;
+}
+
 /*  */
 /* 
 
@@ -2178,6 +2243,18 @@ a.popup__close:hover {
   .development-content__desc {
     margin-top: 12px;
   }
+  .privacy-policy__list.list {
+    margin-left: 0px;
+  }
+  ol.list {
+    margin-left: 20px;
+  }
+  ul.unordered-list {
+    margin-left: 20px;
+  }
+  ol.list li {
+    margin-top: 7px;
+  }
 }
 @media screen and (max-width: 760px) {
   .advantages-cards {
@@ -2310,6 +2387,24 @@ a.popup__close:hover {
   .contacts-information-column__desc {
     font-size: 16px;
     line-height: 20px;
+  }
+  .section-about {
+    margin-top: 40px;
+  }
+  .section-privacy {
+    margin-top: 40px;
+  }
+  .privacy-desc {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .privacy-policy__list > li.list-title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 16px;
+  }
+  ol.list {
+    line-height: 16px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -2544,9 +2639,9 @@ a.popup__close:hover {
   .popup-consultation {
     padding: 20px 20px;
   }
-  .section-about {
-    margin-top: 40px;
-  }
+  /* .section-about {
+      margin-top: 40px;
+  } */
   .about__desc {
     font-size: 14px;
     line-height: 16px;
