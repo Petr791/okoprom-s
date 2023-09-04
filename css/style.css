@@ -1858,6 +1858,51 @@ a.policy-link:hover {
   text-decoration: underline;
 }
 
+/* @page catalog */
+.section-catalog-advantages {
+  margin-top: 60px;
+}
+
+.section-catalog {
+  margin-top: 60px;
+}
+
+.catalog-title {
+  display: inline-block;
+  margin-right: 24px;
+}
+
+.catalog-counter {
+  color: #757575;
+  font-family: Golos;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.catalog-counter__number {
+  margin-right: 2px;
+}
+
+.catalog-content {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: minmax(276px, 276px) 1fr;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  margin-top: 40px;
+}
+
+.catalog-sidebar {
+  min-height: 200px;
+  border: 1px solid red;
+}
+
+.catalog-cards {
+  min-height: 200px;
+  border: 1px solid blue;
+}
+
 /*  */
 /* 
 
