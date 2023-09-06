@@ -1891,17 +1891,26 @@ a.policy-link:hover {
     column-gap: 10px;
 }
 
-.catalog-card-pic-wrapper {}
+
+/*  */
 
 .catalog-card {
-    //max-width: 289px;
     max-width: 100%;
     border-radius: 16px;
     background-color: $background-gray;
     padding: 8px 8px 20px 8px;
     position: relative;
-    // .catalog-card__pic
-    &__pic {
+    display: grid;
+    grid-template: auto 1fr/1fr;
+}
+
+.card {}
+
+.card-picture {
+    // .card-picture__wrapper
+    &__wrapper {}
+    // .card-picture__link
+    &__link {
         display: block;
         position: relative;
         width: 100%;
@@ -1909,75 +1918,28 @@ a.policy-link:hover {
         border-radius: 12px;
         background-color: $white;
     }
-    // .catalog-card__img
+    // .card-picture__img
     &__img {
         max-width: 100%;
         display: block;
     }
-    //
-    &__content {
-        display: grid;
-        grid-auto-flow: row;
-        // grid-template: 1fr auto auto minmax(auto, auto)/1fr;
-        //grid-template: minmax(auto, 55px) auto auto auto/1fr;
-        grid-template: minmax(80px, auto) auto auto 1fr/1fr;
-        //grid-template: 1fr auto auto auto/1fr;
-        padding: 0px 12px;
-        //align-items: end;
-    }
-    // .catalog-card__title
-    &__title {}
-    // .catalog-card__info
-    &__info {}
-    // .catalog-card__price
-    &__price {}
-    // .catalog-card__buy
-    &__buy {
-        width: 100%;
-        color: $white;
-        font-family: Golos;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 20px;
-        padding: 12px 20px;
-        background-color: $background-black;
-        border-radius: 8px;
-        margin-top: 20px;
-        display: block;
-        //align-self: self-end;
-    }
-    // .catalog-card__stickers
-    &__stickers {
-        /* display: inline-grid;
-        grid-template-rows: 1fr;
-        grid-template-rows: auto;
-        column-gap: 4px; */
-        position: absolute;
-        top: 16px;
-        left: 16px;
-        z-index: 10;
-    }
-    // .catalog-card__sticker
-    &__sticker {
-        display: inline-block;
-        font-size: 15px;
-        line-height: 20px;
-        font-weight: 500;
-        font-family: Golos;
-        color: $white;
-        padding: 4px 8px;
-        border-radius: 8px;
-        margin-right: 4px;
-    }
 }
 
-.catalog-card {
-    // .catalog-card__title
-    &__title {}
+.card-content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template: 1fr auto auto auto/1fr;
+    padding: 0px 12px;
+    margin-top: 20px;
+    align-items: end;
+    // .card-content__row
+    &__row {
+        align-self: start;
+    }
+    &__row--bottom {}
 }
 
 .card-title {
-    margin-top: 20px;
     // .card-title__link
     &__link {
         color: $text-black;
@@ -1996,7 +1958,7 @@ a.policy-link:hover {
         grid-template: 1fr/1fr 1fr;
         column-gap: 8px;
         padding: 8px 0px;
-        border-bottom: 1px solid #E9E9E9;
+        border-bottom: 1px solid #E9E9E9
     }
     // .card-info__heading
     &__heading {
@@ -2017,6 +1979,11 @@ a.policy-link:hover {
     }
 }
 
+.card-price-wrapper {
+    //margin-top: 52px;
+    margin-top: 42px;
+}
+
 .card-price {
     color: $text-black;
     font-family: Golos;
@@ -2025,44 +1992,71 @@ a.policy-link:hover {
     line-height: 24px;
     letter-spacing: -0.6px;
     margin-right: 8px;
-    // .card-price__number
-    &__number {}
-    // .card-price__discount
-    &__discount {}
-}
-
-.catalog-card {}
-
-.sticker-discount {
-    background-color: #D21924;
-    // .sticker-discount__value
+    // .card-price__value
     &__value {}
 }
 
-.catalog-price-wrapper {
-    //margin-top: 52px;
-    margin-top: 42px;
-}
-
-.card-price {}
-
-.price-discount {
+.card-price-discount {
     color: $text-gray-light;
     font-family: Golos;
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
     text-decoration: line-through;
-    // .price-discount__number
-    &__number {}
+    // .card-price-discount__value
+    &__value {}
 }
 
-.sticker-booking {
+.card-button {
+    // .card-button__buy
+    &__buy {
+        width: 100%;
+        color: $white;
+        font-family: Golos;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        padding: 12px 20px;
+        background-color: $background-black;
+        border-radius: 8px;
+        margin-top: 20px;
+        display: block;
+    }
+}
+
+.card-stickers {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 10;
+}
+
+.card-sticker {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+    font-family: Golos;
+    color: $white;
+    padding: 4px 8px;
     border-radius: 8px;
+    margin-right: 4px;
+}
+
+.card-sticker-discount {
+    // .card-sticker-discount__value
+    &__value {}
+}
+
+.card-sticker--discount {
+    background-color: #D21924;
+}
+
+.card-sticker--booking {
     background: #2949B5;
 }
 
-.sticker-press {
+.card-sticker--press {
     background: #308D77;
 }
 
