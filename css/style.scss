@@ -1845,6 +1845,18 @@ a.policy-link:hover {
     margin-top: 60px;
 }
 
+.catalog-advantages-cards {
+    display: grid;
+    justify-content: center;
+    column-gap: 16px;
+    row-gap: 32px;
+    //grid-template-columns: repeat(auto-fit, minmax(304px, 389px));
+    grid-template-columns: repeat(auto-fit, minmax(304px, 1fr));
+}
+
+
+/*  */
+
 .section-catalog {
     margin-top: 60px;
 }
@@ -1860,7 +1872,7 @@ a.policy-link:hover {
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
-    &__number {
+    &__quantity {
         margin-right: 2px;
     }
 }
@@ -1869,31 +1881,58 @@ a.policy-link:hover {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: minmax(276px, 276px) 1fr;
-    //column-gap: 40px;
     column-gap: 30px;
     margin-top: 40px;
 }
 
-.catalog-sidebar {
-    min-height: 200px;
+.catalog-sidebar {}
+
+.filters {
+    min-height: 400px;
     border: 1px solid red;
 }
 
+.mobail-filters {
+    display: none;
+    &__btn {
+        color: $white;
+        font-family: Golos;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        background-color: $background-black;
+        padding: 12px 41px 12px 20px;
+        border-radius: 8px;
+        span {
+            position: relative;
+            &::after {
+                content: '';
+                background-image: url('../images/catalog/filter.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 22px 22px;
+                width: 22px;
+                height: 22px;
+                position: absolute;
+                right: -24px;
+            }
+        }
+    }
+}
+
+.catalog-cards-wrapper {}
+
 .catalog-cards {
-    min-height: 200px;
     border: 1px solid blue;
     display: grid;
-    //grid-template-rows: auto;
     grid-auto-rows: 1fr;
-    //grid-template-columns: repeat(auto-fill, minmax(230px, 289px));
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     row-gap: 15px;
-    column-gap: 10px;
+    column-gap: 16px;
 }
 
 .catalog-card {
-    //max-width: 289px;
-    max-width: 100%;
+    //max-width: 100%;
     border-radius: 16px;
     background-color: $background-gray;
     padding: 8px 8px 20px 8px;
@@ -1916,12 +1955,8 @@ a.policy-link:hover {
     &__content {
         display: grid;
         grid-auto-flow: row;
-        // grid-template: 1fr auto auto minmax(auto, auto)/1fr;
-        //grid-template: minmax(auto, 55px) auto auto auto/1fr;
         grid-template: minmax(80px, auto) auto auto 1fr/1fr;
-        //grid-template: 1fr auto auto auto/1fr;
         padding: 0px 12px;
-        //align-items: end;
     }
     // .catalog-card__title
     &__title {}
@@ -1942,14 +1977,9 @@ a.policy-link:hover {
         border-radius: 8px;
         margin-top: 20px;
         display: block;
-        //align-self: self-end;
     }
     // .catalog-card__stickers
     &__stickers {
-        /* display: inline-grid;
-        grid-template-rows: 1fr;
-        grid-template-rows: auto;
-        column-gap: 4px; */
         position: absolute;
         top: 16px;
         left: 16px;
@@ -2067,6 +2097,26 @@ a.policy-link:hover {
 
 /*  */
 
+.more {
+    text-align: center;
+    margin-top: 40px;
+    // .more__btn
+    &__btn {
+        color: $text-black;
+        font-family: Golos;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        padding: 12px 20px;
+        background-color: $background-gray;
+        border-radius: 8px;
+    }
+}
+
+
+/*  */
+
 
 /* 
 
@@ -2165,8 +2215,6 @@ a.policy-link:hover {
     }
     .why-cards {
         grid-template-rows: 1fr 1fr;
-        //grid-template-columns: minmax(220px, 300px) minmax(220px, 300px) minmax(220px, 300px);
-        // grid-template-columns: repeat( minmax(220px, 1fr));
     }
     //footer
     .footer {
@@ -2211,7 +2259,6 @@ a.policy-link:hover {
     }
     // @pages contacts
     .contacts-content {
-        //grid-template: 1fr 1fr/minmax(400px, 491px) 1fr;
         grid-template: auto auto/1fr;
         row-gap: 60px;
         margin-top: 40px;
@@ -2253,6 +2300,16 @@ a.policy-link:hover {
     .development-content__title {
         margin-top: 40px;
     }
+    // @page catalog
+    .catalog-advantages-cards {
+        column-gap: 12px;
+    }
+    .catalog-cards {
+        grid-template-columns: minmax(250px, 304px) minmax(250px, 304px);
+    }
+    .more__btn {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -2291,11 +2348,29 @@ a.policy-link:hover {
         border-radius: 16px;
         padding: 36px;
     }
+    //@page catalog
+    .catalog-content {
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        row-gap: 32px;
+    }
+    .catalog-sidebar {
+        justify-self: start;
+    }
+    .filters {
+        display: none;
+    }
+    .mobail-filters {
+        display: block;
+    }
+    .catalog-cards {
+        grid-template-columns: repeat(2, minmax(230px, 392px));
+    }
 }
 
 @media screen and (max-width: 768px) {
     .container {
-        //padding: 0 76px;
         padding: 0 72px;
     }
     /* header */
@@ -2524,8 +2599,8 @@ a.policy-link:hover {
         column-gap: 12px;
     }
     .advantages-card__pic {
-        border-radius: 4px;
-        padding: 10px;
+        /*   border-radius: 4px;
+        padding: 10px; */
     }
     .advantages-card__title {
         font-size: 16px;
@@ -2628,6 +2703,98 @@ a.policy-link:hover {
     }
     ol.list {
         line-height: 16px;
+    }
+    //@page catalog
+    .section-catalog-advantages {
+        margin-top: 40px;
+    }
+    .catalog-advantages-cards {
+        row-gap: 20px;
+    }
+    .catalog-title {
+        display: block;
+        margin-right: 0px;
+    }
+    .catalog-counter {
+        display: block;
+        font-size: 14px;
+        line-height: 16px;
+        margin-top: 2px;
+        &__quantity {
+            margin-right: 0px;
+        }
+    }
+    .catalog-content {
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        margin-top: 32px;
+    }
+    .mobail-filters {
+        &__btn {
+            font-size: 14px;
+            padding: 12px 41px 12px 20px;
+            span {
+                position: relative;
+                &::after {
+                    position: absolute;
+                    top: -3px;
+                    right: -27px;
+                }
+            }
+        }
+    }
+    .catalog-cards {
+        column-gap: 8px;
+        row-gap: 8px;
+    }
+    .catalog-card {
+        padding: 12px;
+    }
+    .catalog-card__content {
+        padding: 0px;
+    }
+    .card-title {
+        margin-top: 12px;
+    }
+    .card-title__link {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .card-info {
+        margin-top: 12px;
+    }
+    .card-info__heading {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .card-info__value {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .catalog-price-wrapper {
+        margin-top: 20px;
+    }
+    .card-price {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .price-discount {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .catalog-card__buy {
+        font-size: 14px;
+        line-height: 16px;
+        padding: 14px 20px;
+        margin-top: 12px;
+    }
+    .more {
+        margin-top: 32px;
+    }
+    .more__btn {
+        font-size: 14px;
+        line-height: 16px;
+        padding: 14px 20px;
     }
 }
 
@@ -2874,9 +3041,6 @@ a.policy-link:hover {
         padding: 20px 20px;
     }
     // @page about-company
-    /* .section-about {
-        margin-top: 40px;
-    } */
     .about__desc {
         font-size: 14px;
         line-height: 16px;
@@ -2902,6 +3066,16 @@ a.policy-link:hover {
     .development-content__title {}
     .development-content__desc {
         margin-top: 12px;
+    }
+    // @page catalog
+    .catalog-advantages-cards {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .catalog-cards {
+        grid-template-columns: minmax(260px, 420px);
+    }
+    .catalog-card__content {
+        grid-template: auto auto auto 1fr/1fr;
     }
 }
 
