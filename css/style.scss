@@ -1890,6 +1890,7 @@ a.policy-link:hover {
 
 .catalog-sidebar {
     position: relative;
+    width: 100%;
 }
 
 .filters-wrapper {
@@ -1919,6 +1920,7 @@ a.policy-link:hover {
     justify-content: space-between;
     border-radius: 8px;
     padding: 12px 12px;
+    align-items: center;
     transition: background-color .3s linear;
     // .filters-btn__title
     &__title {
@@ -1945,7 +1947,7 @@ a.policy-link:hover {
     background-color: #2022263b;
     // .filters-btn__title
     .filters-btn__title {
-        color: $white;
+        //color: $white;
     }
     // .filters-btn__icon
     .filters-btn__icon {}
@@ -2014,6 +2016,51 @@ a.policy-link:hover {
         }
     }
 }
+
+.mobail-filters-wrapper {
+    display: none;
+    margin-top: 30px;
+    border: 5px solid $black;
+    border-radius: 10px;
+    padding: 2px 16px 91px 16px;
+}
+
+.mobail-filters-wrapper.active {
+    display: block;
+}
+
+.mobail-filters-inner {
+    display: grid;
+    grid-template: auto/1fr;
+    row-gap: 8px;
+    //pointer-events: none;
+    .filters-btn {
+        //display: block;
+        padding: 16px 16px;
+        border-radius: 8px;
+        //border-bottom: 1px solid #dadada;
+        //position: relative;
+    }
+    .filters-btn:hover {
+        border-radius: 8px;
+    }
+    .filters-btn.active {
+        border-radius: 8px;
+    }
+    .filters-btn__title {
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+
+/* .wrap {
+    border-bottom: 1px solid rgb(127, 127, 127);
+}
+
+.wrap:hover {
+    border-bottom: 1px solid transparent;
+} */
 
 
 /* cards products */
@@ -2457,6 +2504,10 @@ a.policy-link:hover {
     }
     .catalog-sidebar {
         justify-self: start;
+        position: static;
+    }
+    .filters-wrapper {
+        position: static;
     }
     .filters {
         display: none;

@@ -63,3 +63,15 @@ formSearch.addEventListener('submit', function() {
 
 
 //
+
+const mobileFiltersButton = document.getElementById('filters-btn');
+const mobileFiltersBlock = document.getElementById('filters-block');
+
+console.log(mobileFiltersButton);
+console.log(mobileFiltersBlock);
+mobileFiltersButton.addEventListener('click', function() {
+    console.log('hhhhh');
+    mobileFiltersBlock.classList.toggle('active');
+
+
+});
