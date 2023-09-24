@@ -34,6 +34,10 @@ body.lock {
     margin-top: 120px;
 }
 
+.hidden {
+    display: none !important;
+}
+
 
 /* @header */
 
@@ -1850,7 +1854,6 @@ a.policy-link:hover {
     justify-content: center;
     column-gap: 16px;
     row-gap: 32px;
-    //grid-template-columns: repeat(auto-fit, minmax(304px, 389px));
     grid-template-columns: repeat(auto-fit, minmax(304px, 1fr));
 }
 
@@ -1902,7 +1905,6 @@ a.policy-link:hover {
 }
 
 .filters {
-    border: 1px solid red;
     position: sticky;
     top: 0;
 }
@@ -2017,12 +2019,50 @@ a.policy-link:hover {
     }
 }
 
+.filters-casing {}
+
+.filters-casing.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    //background-color: #ffffffd4;
+    background-color: #808080d4;
+    border: 5px solid $black;
+    border-radius: 10px;
+}
+
+.mobail-filters-wrapper {
+    position: absolute;
+    height: 85vh;
+    //width: 100vw;
+    width: 100%;
+    background-color: #ffffff;
+    bottom: 0;
+}
+
 .mobail-filters-wrapper {
     display: none;
     margin-top: 30px;
-    border: 5px solid $black;
-    border-radius: 10px;
-    padding: 2px 16px 91px 16px;
+    padding: 4px 16px 91px 16px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.mobail-filters-wrapper::before {
+    content: '';
+    display: block;
+    width: 45px;
+    height: 3px;
+    background-color: $black;
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .mobail-filters-wrapper.active {
@@ -2033,13 +2073,11 @@ a.policy-link:hover {
     display: grid;
     grid-template: auto/1fr;
     row-gap: 8px;
+    margin-top: 52px;
     //pointer-events: none;
     .filters-btn {
-        //display: block;
         padding: 16px 16px;
         border-radius: 8px;
-        //border-bottom: 1px solid #dadada;
-        //position: relative;
     }
     .filters-btn:hover {
         border-radius: 8px;
@@ -2053,14 +2091,9 @@ a.policy-link:hover {
     }
 }
 
-
-/* .wrap {
-    border-bottom: 1px solid rgb(127, 127, 127);
+.filters-btn span {
+    pointer-events: none;
 }
-
-.wrap:hover {
-    border-bottom: 1px solid transparent;
-} */
 
 
 /* cards products */
@@ -2068,7 +2101,6 @@ a.policy-link:hover {
 .catalog-cards-wrapper {}
 
 .catalog-cards {
-    border: 1px solid blue;
     display: grid;
     grid-auto-rows: 1fr;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -2077,7 +2109,6 @@ a.policy-link:hover {
 }
 
 .catalog-card {
-    //max-width: 100%;
     border-radius: 16px;
     background-color: $background-gray;
     padding: 8px 8px 20px 8px;

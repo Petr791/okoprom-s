@@ -177,6 +177,10 @@ body.lock {
   margin-top: 120px;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /* @header */
 .top-menu {
   background-color: #F4F5F8;
@@ -1921,7 +1925,6 @@ a.policy-link:hover {
 }
 
 .filters {
-  border: 1px solid red;
   position: sticky;
   top: 0;
 }
@@ -2025,12 +2028,48 @@ a.policy-link:hover {
   right: -24px;
 }
 
+.filters-casing.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: rgba(128, 128, 128, 0.831372549);
+  border: 5px solid #000000;
+  border-radius: 10px;
+}
+
+.mobail-filters-wrapper {
+  position: absolute;
+  height: 85vh;
+  width: 100%;
+  background-color: #ffffff;
+  bottom: 0;
+}
+
 .mobail-filters-wrapper {
   display: none;
   margin-top: 30px;
-  border: 5px solid #000000;
-  border-radius: 10px;
-  padding: 2px 16px 91px 16px;
+  padding: 4px 16px 91px 16px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.mobail-filters-wrapper::before {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 3px;
+  background-color: #000000;
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .mobail-filters-wrapper.active {
@@ -2041,6 +2080,7 @@ a.policy-link:hover {
   display: grid;
   grid-template: auto/1fr;
   row-gap: 8px;
+  margin-top: 52px;
 }
 .mobail-filters-inner .filters-btn {
   padding: 16px 16px;
@@ -2057,16 +2097,12 @@ a.policy-link:hover {
   line-height: 16px;
 }
 
-/* .wrap {
-    border-bottom: 1px solid rgb(127, 127, 127);
+.filters-btn span {
+  pointer-events: none;
 }
 
-.wrap:hover {
-    border-bottom: 1px solid transparent;
-} */
 /* cards products */
 .catalog-cards {
-  border: 1px solid blue;
   display: grid;
   grid-auto-rows: 1fr;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
