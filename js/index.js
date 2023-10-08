@@ -72,7 +72,7 @@ const filtersCasing = document.querySelector('.filters-casing');
 let parentfilters = document.querySelector('.filters-wrapper');
 let filtersBtns = document.querySelectorAll('.filters-btn');
 
-/* 
+
 for (i = 0; i < parentfilters.length; index++) {
     const elem = parentfilters[index];
 
@@ -98,10 +98,10 @@ for (i = 0; i < parentfilters.length; index++) {
     });
 
 }
- */
 
 
-parentfilters.addEventListener('click', (event) => {
+
+/* parentfilters.addEventListener('click', (event) => {
     // Отлавливаем элемент в родители на который мы нажали
     let targetEl = event.target;
 
@@ -118,7 +118,7 @@ parentfilters.addEventListener('click', (event) => {
         document.location.href = filterLink;
     }
 
-});
+}); */
 
 mobileFiltersButton.addEventListener('click', function() {
     mobileFiltersBlock.classList.toggle('active');
