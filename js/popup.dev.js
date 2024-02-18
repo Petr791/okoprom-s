@@ -1,13 +1,9 @@
 "use strict";
 
-
-
 var popupLinks = document.querySelectorAll('.popup-link');
 var body = document.querySelector('body');
-
 var lockPadding = document.querySelectorAll('.lock-padding'); // для объектов фиксированной ширины
 var popupContent = document.getElementById('popup__content');
-
 var unlock = true;
 var timeout = 800;
 
@@ -134,7 +130,7 @@ document.addEventListener('keydown', function(e) {
         var popupActive = document.querySelector('.popup.open');
         popupClose(popupActive);
     }
-}); //  добавление классов анимации popup
+});
 
 
 

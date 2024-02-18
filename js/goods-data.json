@@ -1,0 +1,24 @@
+{
+    "p1001": {
+        "name": "S2-3 Станок для разделки кабеля (Автоматический)",
+        "cost": 34990,
+        "url": "#",
+        "count": "",
+        "image": "./images/catalog/catalog-1.png"
+    },
+    "p1002": {
+        "name": "S1-3 Компактный для кабелей в оплетке",
+        "cost": 73800,
+        "url": "#",
+        "count": "",
+        "image": "./images/catalog/catalog-2.png"
+    },
+    "p1003": {
+        "name": "S9 Станок с прессовым валом (Автоматический)",
+        "cost": 64900,
+        "url": "#",
+        "count": "",
+        "image": "./images/catalog/catalog-3.png"
+    }
+
+}

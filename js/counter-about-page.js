@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     // счетчики на странице "О компании"
     $(window).scroll(function() {
         scrollTracking();
